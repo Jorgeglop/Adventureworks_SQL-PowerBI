@@ -4,7 +4,7 @@
 
 Este repositorio contiene la implementación completa de un proyecto de Business Intelligence utilizando la base de datos AdventureWorks, desde la transformación ETL hasta la visualización en Power BI, siguiendo las mejores prácticas de modelado dimensional según la metodología Kimball.
 
-![image](https://github.com/user-attachments/assets/eff4aa39-5740-43f2-996b-be3921a2c88b)
+![AdventureWorks-Esquema](https://github.com/user-attachments/assets/b8b40ae8-f252-43c0-a606-4f138d465b22)
 
 
 ## Características del Proyecto
