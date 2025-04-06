@@ -1,4 +1,4 @@
-# AdventureWorks_SQL-PowerBI
+# AdventureWorks SQL & PowerBI
 
 ## Modelo Dimensional y Dashboard Analítico 
 
