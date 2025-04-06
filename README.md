@@ -9,24 +9,24 @@ Este repositorio contiene la implementación completa de un proyecto de Business
 
 ## Características del Proyecto
 
-- **ETL en SQL Server:** Transformación de un modelo OLTP a un modelo dimensional optimizado para análisis
-- **Metodología Kimball:** Implementación rigurosa de un esquema en estrella (star schema)
-- **Dashboard Interactivo:** Visualizaciones avanzadas con KPIs de ventas, rentabilidad y comportamiento del cliente
-- **Análisis Multidimensional:** Segmentación por productos, territorios y clientes
+- **ETL en SQL Server:** transformación de un modelo OLTP a un modelo dimensional optimizado para análisis
+- **Metodología Kimball:** implementación rigurosa de un esquema en estrella (star schema)
+- **Dashboard Interactivo:** visualizaciones avanzadas con KPIs de ventas, rentabilidad y comportamiento del cliente
+- **Análisis Multidimensional:** segmentación por productos, territorios y clientes
 
 ## Estructura del Modelo Dimensional
 
 ### Tablas de Dimensiones
 El proyecto implementa las siguientes dimensiones, cada una diseñada para facilitar análisis específicos:
 
-- **DimFecha:** Jerarquía temporal completa (día, mes, trimestre, año, año fiscal)
-- **DimProducto:** Categorización de productos  
-- **DimCliente:** Información demográfica y comportamiento de compra agregado
-- **DimTerritorio:** Segmentación geográfica para análisis regional
-- **DimPromocion:** Detalles de ofertas y descuentos para medir efectividad
+- **DimFecha:** jerarquía temporal completa (día, mes, trimestre, año, año fiscal)
+- **DimProducto:** categorización de productos  
+- **DimCliente:** información demográfica y comportamiento de compra agregado
+- **DimTerritorio:** segmentación geográfica para análisis regional
+- **DimPromocion:** detalles de ofertas y descuentos para medir efectividad
 
 ### Tabla de Hechos
-- **FactSalesOrderDetail:** Núcleo analítico que integra todas las dimensiones con métricas calculadas clave:
+- **FactSalesOrderDetail:** núcleo analítico que integra todas las dimensiones con métricas calculadas clave:
   - Cantidades y precios unitarios
   - Métricas financieras (costos, ingresos, márgenes)
   - Descuentos aplicados
@@ -37,9 +37,9 @@ El proyecto implementa las siguientes dimensiones, cada una diseñada para facil
 ### Proceso ETL
 El proceso ETL sigue un enfoque metódico para transformar datos operacionales en un modelo analítico:
 
-1. **Extracción:** Identificación y selección de tablas fuente relevantes del esquema OLTP AdventureWorks.
+1. **Extracción:** identificación y selección de tablas fuente relevantes del esquema OLTP AdventureWorks.
 
-2. **Transformación:**  Cálculo de indicadores clave como el margen de beneficio y los días de envío, a partir de operaciones aritméticas y funciones de fechas, además de otros procesos de transformación aplicados en los datos.
+2. **Transformación:**  cálculo de indicadores clave como el margen de beneficio y los días de envío, a partir de operaciones aritméticas y funciones de fechas, además de otros procesos de transformación aplicados en los datos.
 
     ```sql
    -- Transformación para cálculo de márgenes de beneficio
@@ -53,15 +53,15 @@ El proceso ETL sigue un enfoque metódico para transformar datos operacionales e
    DATEDIFF(DAY, soh.OrderDate, soh.ShipDate) AS ShippingDays
    ```
   
-4. **Carga:** Población de las tablas dimensionales y de hechos mediante operaciones INSERT/SELECT, con gestión de valores nulos y claves foráneas
+4. **Carga:** población de las tablas dimensionales y de hechos mediante operaciones INSERT/SELECT, con gestión de valores nulos y claves foráneas
 
 ### Dashboard en Power BI
 El dashboard desarrollado aprovecha este modelo dimensional para proporcionar:
 
-- **Análisis Temporal:** Tendencias de ventas y rentabilidad (2011-2014)
-- **Segmentación por Producto:** Análisis de categorías y subcategorías con mayor margen
-- **Comportamiento del Cliente:** Patrones de compra y segmentación
-- **Distribución Geográfica:** Rendimiento por territorios y países
+- **Análisis Temporal:** tendencias de ventas y rentabilidad (2011-2014)
+- **Segmentación por Producto:** análisis de categorías y subcategorías con mayor margen
+- **Comportamiento del Cliente:** patrones de compra y segmentación
+- **Distribución Geográfica:** rendimiento por territorios y países
   
 ![image](https://github.com/user-attachments/assets/10d5ae3b-81bc-4c40-bf11-1e8b4a3f8c68)
 
@@ -70,9 +70,9 @@ El dashboard desarrollado aprovecha este modelo dimensional para proporcionar:
 
 ## Tecnologías Utilizadas
 
-- **SQL Server:** Para el modelado dimensional y proceso ETL
-- **Power BI:** Para las visualizaciones y dashboard interactivo
-- **AdventureWorks:** Base de datos SQL de origen
+- **SQL Server:** para el modelado dimensional y proceso ETL
+- **Power BI:** para las visualizaciones y dashboard interactivo
+- **AdventureWorks:** base de datos SQL de origen
 
 ## Resultados Clave
 
