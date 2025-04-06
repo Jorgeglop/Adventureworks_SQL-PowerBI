@@ -9,28 +9,28 @@ Este repositorio contiene la implementación completa de un proyecto de Business
 
 ## Características del Proyecto
 
-- **ETL en SQL Server:** transformación de un modelo OLTP a un modelo dimensional optimizado para análisis
-- **Metodología Kimball:** implementación rigurosa de un esquema en estrella (star schema)
-- **Dashboard Interactivo:** visualizaciones avanzadas con KPIs de ventas, rentabilidad y comportamiento del cliente
-- **Análisis Multidimensional:** segmentación por productos, territorios y clientes
+- **ETL en SQL Server:** transformación de un modelo OLTP a un modelo dimensional optimizado para análisis.
+- **Metodología Kimball:** implementación rigurosa de un esquema en estrella (star schema).
+- **Dashboard Interactivo:** visualizaciones avanzadas con KPIs de ventas, rentabilidad y comportamiento del cliente.
+- **Análisis Multidimensional:** segmentación por productos, territorios y clientes.
 
 ## Estructura del Modelo Dimensional
 
 ### Tablas de Dimensiones
 El proyecto implementa las siguientes dimensiones, cada una diseñada para facilitar análisis específicos:
 
-- **DimFecha:** jerarquía temporal completa (día, mes, trimestre, año, año fiscal)
-- **DimProducto:** categorización de productos  
-- **DimCliente:** información demográfica y comportamiento de compra agregado
-- **DimTerritorio:** segmentación geográfica para análisis regional
-- **DimPromocion:** detalles de ofertas y descuentos para medir efectividad
+- **DimFecha:** jerarquía temporal completa (día, mes, trimestre, año, año fiscal).
+- **DimProducto:** categorización de productos.
+- **DimCliente:** información demográfica y comportamiento de compra agregado.
+- **DimTerritorio:** segmentación geográfica para análisis regional.
+- **DimPromocion:** detalles de ofertas y descuentos para medir efectividad.
 
 ### Tabla de Hechos
 - **FactSalesOrderDetail:** núcleo analítico que integra todas las dimensiones con métricas calculadas clave:
-  - Cantidades y precios unitarios
-  - Métricas financieras (costos, ingresos, márgenes)
-  - Descuentos aplicados
-  - Medidas de tiempo de envío
+  - Cantidades y precios unitarios.
+  - Métricas financieras (costos, ingresos, márgenes).
+  - Descuentos aplicados.
+  - Medidas de tiempo de envío.
 
 ## Implementación Técnica
 
@@ -58,10 +58,10 @@ El proceso ETL sigue un enfoque metódico para transformar datos operacionales e
 ### Dashboard en Power BI
 El dashboard desarrollado aprovecha este modelo dimensional para proporcionar:
 
-- **Análisis Temporal:** tendencias de ventas y rentabilidad (2011-2014)
-- **Segmentación por Producto:** análisis de categorías y subcategorías con mayor margen
-- **Comportamiento del Cliente:** patrones de compra y segmentación
-- **Distribución Geográfica:** rendimiento por territorios y países
+- **Análisis Temporal:** tendencias de ventas y rentabilidad (2011-2014).
+- **Segmentación por Producto:** análisis de categorías y subcategorías con mayor margen.
+- **Comportamiento del Cliente:** patrones de compra y segmentación.
+- **Distribución Geográfica:** rendimiento por territorios y países.
   
 ![image](https://github.com/user-attachments/assets/10d5ae3b-81bc-4c40-bf11-1e8b4a3f8c68)
 
@@ -70,21 +70,21 @@ El dashboard desarrollado aprovecha este modelo dimensional para proporcionar:
 
 ## Tecnologías Utilizadas
 
-- **SQL Server:** para el modelado dimensional y proceso ETL
-- **Power BI:** para las visualizaciones y dashboard interactivo
-- **AdventureWorks:** base de datos SQL de origen
+- **SQL Server:** para el modelado dimensional y proceso ETL.
+- **Power BI:** para las visualizaciones y dashboard interactivo.
+- **AdventureWorks:** base de datos SQL de origen.
 
 ## Resultados Clave
 
 El dashboard proporciona insights críticos para el negocio:
-- Margen de beneficio promedio de 29.05%
-- Identificación de subcategorías de alto margen (Bike Stands: 62.6%)
-- Visualización de tendencias de crecimiento de ingresos y márgenes
-- Análisis detallado del comportamiento de compra por cliente
+- Margen de beneficio promedio de 29.05%.
+- Identificación de subcategorías de alto margen (Bike Stands: 62.6%).
+- Visualización de tendencias de crecimiento de ingresos y márgenes.
+- Análisis detallado del comportamiento de compra por cliente.
 
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT. Consulte el archivo `LICENSE` para más detalles
+Este proyecto está bajo la licencia MIT. Consulte el archivo `LICENSE` para más detalles.
 
 
